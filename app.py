@@ -33,5 +33,6 @@ def root():
 def predict(data: InputData):
     X = np.array([[data.height, data.weight, data.age, data.sex]])
     pred = model.predict(X)[0]
-    return {"Fat Free Mass prediction": float(pred)}
+    return {"Fat Free Mass Index prediction": float(pred)}
+
 
