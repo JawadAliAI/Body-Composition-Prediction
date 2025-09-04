@@ -34,4 +34,4 @@ def predict(data: InputData):
     X = np.array([[data.height, data.weight ,data.age, data.sex]])
     pred = model.predict(X)[0]
 
-    return {"BF prediction": float(pred)}
+    return {"Lead Body Mass prediction": float(pred)}
