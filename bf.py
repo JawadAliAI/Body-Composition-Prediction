@@ -7,7 +7,7 @@ import numpy as np
 # 1. Load ONE Model
 #    (Change filename when needed)
 # =========================
-MODEL_PATH = r"C:\Users\Leezi Asghar\Downloads\Riaya\API\BF.pkl"  # <-- fixed path
+MODEL_PATH = "BF.pkl"  # <-- fixed path
 with open(MODEL_PATH, "rb") as f:
     model = pickle.load(f)
 
@@ -33,4 +33,5 @@ def root():
 def predict(data: InputData):
     X = np.array([[data.height, data.weight ,data.age, data.sex]])
     pred = model.predict(X)[0]
+
     return {"BF prediction": float(pred)}
